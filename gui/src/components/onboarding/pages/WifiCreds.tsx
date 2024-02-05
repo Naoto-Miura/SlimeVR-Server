@@ -77,7 +77,7 @@ export function WifiCredsPage() {
             >
               <Input
                 control={control}
-                rules={{ required: true }}
+                rules={{ required: true,minLength: "8", maxLength: "63"}}
                 name="password"
                 type="password"
                 label="Password"

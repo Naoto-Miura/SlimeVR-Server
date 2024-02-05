@@ -14,6 +14,7 @@ export interface WindowConfig {
 
 export interface Config {
   debug: boolean;
+  setupWizard : boolean;
   lang: string;
   doneOnboarding: boolean;
   watchNewDevices: boolean;
@@ -37,6 +38,7 @@ export interface ConfigContext {
 
 export const defaultConfig: Omit<Config, 'devSettings'> = {
   lang: 'en',
+  setupWizard: true,
   debug: false,
   doneOnboarding: false,
   watchNewDevices: true,

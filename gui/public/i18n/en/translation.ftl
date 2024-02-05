@@ -401,6 +401,7 @@ settings-general-interface-theme = Color theme
 settings-general-interface-lang = Select language
 settings-general-interface-lang-description = Change the default language you want to use.
 settings-general-interface-lang-placeholder = Select the language to use
+settings-general-interface-setupwizard-label = show the setup wizard
 # Keep the font name untranslated
 settings-interface-appearance-font = GUI font
 settings-interface-appearance-font-description = This changes the font used by the interface.

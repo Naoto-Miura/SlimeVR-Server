@@ -20,6 +20,7 @@ import { Dropdown } from '@/components/commons/Dropdown';
 interface InterfaceSettingsForm {
   appearance: {
     devmode: boolean;
+	setupWizard: boolean;
     theme: string;
     textSize: number;
     fonts: string;
@@ -40,6 +41,7 @@ export function InterfaceSettings() {
     defaultValues: {
       appearance: {
         devmode: config?.debug ?? defaultConfig.debug,
+		setupWizard: config?.setupWizard ?? defaultConfig.setupWizard,
         theme: config?.theme ?? defaultConfig.theme,
         textSize: config?.textSize ?? defaultConfig.textSize,
         fonts: config?.fonts.join(',') ?? defaultConfig.fonts.join(','),
@@ -59,6 +61,7 @@ export function InterfaceSettings() {
 
   const onSubmit = (values: InterfaceSettingsForm) => {
     setConfig({
+	  setupWizard: values.appearance.setupWizard,
       debug: values.appearance.devmode,
       watchNewDevices: values.notifications.watchNewDevices,
       feedbackSound: values.notifications.feedbackSound,
@@ -356,6 +359,17 @@ export function InterfaceSettings() {
             </div>
             <div className="grid sm:grid-cols-2 pb-4">
               <LangSelector alignment="left" />
+            </div>
+			<div className="grid sm:grid-cols-2 pb-4">
+                <CheckBox
+                    variant="toggle"
+                    control={control}
+                    outlined
+                    name="appearance.setupWizard"
+                    label={l10n.getString(
+                    'settings-general-interface-setupwizard-label'
+                    )}
+                />
             </div>
           </>
         </SettingsPagePaneLayout>

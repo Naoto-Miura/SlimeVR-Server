@@ -430,6 +430,7 @@ settings-general-interface-theme = Thème
 settings-general-interface-lang = Langue
 settings-general-interface-lang-description = Choisir la langue par défaut.
 settings-general-interface-lang-placeholder = Langue
+settings-general-interface-setupwizard-label = afficher l'assistant de configuration
 # Keep the font name untranslated
 settings-interface-appearance-font = Police de l'interface
 settings-interface-appearance-font-description = Cela change la police d'écriture utilisée par l'interface.
